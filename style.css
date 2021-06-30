@@ -29,6 +29,21 @@
 *{
     box-sizing:border-box ;
 }
+body{
+    margin:0;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-style: var(--weight-bold);
+}
+ul{
+display: flex;
+list-style: none;
+padding-left: 0;
+}
+
+
 /* Typography    */
 h1{
     font-size: var(--font-large);
@@ -53,4 +68,20 @@ p{
     font-weight: var(--weight-regular);
     color: var(--color-black);
     margin:4px 0px; 
+}
+/* Navbar */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-light-pink);
+    align-items: center;
+  
+}
+.navbar__menu{
+    display:flex;
+    
+}
+.navbar__menu__item{
+    padding: 8px 12px;
+    margin:0 4px;;
 }
