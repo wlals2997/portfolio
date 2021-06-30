@@ -1,0 +1,30 @@
+/* Global */
+:root{
+    /* Color */
+--color-white: white;
+--color-light-borwn:#E68663;
+--color-light-pink:#F08267;
+--color-dark-brown:#D66958;
+--color-pink:#F08078;
+--color-dark-pink:#D69494;
+--color-black:#1B2000;
+--color-light-gray:#7c7c7a;
+
+/* Font size */
+--font-large:48px;
+--font-medium:28px;
+--font-regular:18px;
+--font-small:16px;
+--font-micro:14px;
+
+/* Font weight */
+--weight-bold:700;
+--weight-semi-bold:600;
+--weight-regular:400;
+
+/* Size */
+
+}
+/* Universal tags */
+*{box-sizing:border-box ;
+}
