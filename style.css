@@ -44,9 +44,18 @@ a{
 color: var(--color-white);
 }
 ul{
-    list-style: none;
     padding-left: 0;
-    
+}
+li{
+    list-style: none;
+}
+button{
+    background-color: transparent;
+    /* transparent:배경색이 없다 */
+    cursor: pointer;
+    border: none;
+    outline: none;
+    /* 버튼의 아웃라인 */
 }
   /* Typography */
   
@@ -103,11 +112,35 @@ ul{
 }
 .navbar__menu__item.active{
     border: 1px solid white;
-  
-
 }
 .navbar__menu__item:hover{
 background-color: var(--color-dark-pink);
 }
-
+/* Home */
+#home{
+    background: url('imgs/home-backgorund.png') center/ cover no-repeat;
+    /* 센터에다가 두면서 커버 반응형으로 되도록 그리고 no-reapet 반복하지 않게 =자동으로 사이즈가 늘어나면서 반응형으로 만들어진다. */
+    padding: 40px;
+    text-align: center;
+}
+.home_avatar{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    /* 사진을 동그랗게 만들어준다 */
+    border:2px solid var(--color-light-white);
+}
+.home_title,
+.home_description{
+    color: var(--color-white);
+}
+.home_contact{
+   color: var(--color-white);
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin:24px;
+    padding:8px 12px;
+    border:2px solid var(--color-white) ;
+    border-radius: 4px;
+}
 
