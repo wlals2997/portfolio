@@ -143,4 +143,16 @@ background-color: var(--color-dark-pink);
     border:2px solid var(--color-white) ;
     border-radius: 4px;
 }
-
+/* Section common */
+.section{
+    padding: 50px;
+   text-align: center;
+   max-width: 1200px;
+   /* 최대크기:데스크탑 1000~1200이 가장 최적화된 크기*/
+   margin: auto;
+   /* 마진으로 양쪽 너비가 골고루 배치됨 */
+}
+/* about */
+.about__majors{
+    display: flex;
+    
