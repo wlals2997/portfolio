@@ -40,37 +40,89 @@
     <h3 class="home_description">노력(벌)이 없으면 큰 성과(꿀)가 없다.</h3>
     <button class="home_contact">contact me</button>
 </section>
+
     <!-- About -->
-<section id="about"></section>
+<section id="about" class="section">
 <h1>About me</h1>
-<ul>
-    <li>이지민(Lee Jimin)</li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-</ul>
-    <div class="about_majors">
-        <h2>Skills</h2>
- <div  class="major_icon">
-    <i class="fab fa-html5" ></i>
-    <h3>HTML5</h3>
-<p>~~~</p>
- </div>
- <div class="major_icon">
-    <i class="fab fa-css3-alt"></i>
-    <h3>CSS</h3>
-    <p>~~~</p>
- </div>
- <div class="major_icon">
-    <i class="fab fa-js"></i>
-    <h3>Javascript</h3>
-    <p>~~~</p>
- </div>
+<p>
+test
+</p>
+<div class="keywords">
+    <h2>키워드로말해요</h2>
+</div>
+
+<div class="about__majors">
+    <div class="major">
+      <div class="major__icon">
+        <i class="fab fa-html5"></i>
+      </div>
+      <h2 class="major__title">Front-end</h2>
+      <div class="major__description">
+        HTML, CSS, JavaScript, TypeScript,
+        <br />React, Vue, Web APIs
+      </div>
     </div>
- 
-      
-    <section id="skills"></section>
+    <div class="major">
+      <div class="major__icon">
+        <i class="fas fa-mobile"></i>
+      </div>
+      <h2 class="major__title">Mobile</h2>
+      <p class="major__description">
+        Android, iOS, React Native, Flutter,
+        <br />Java, Swift, Kotlin
+      </p>
+    </div>
+    <div class="major">
+      <div class="major__icon">
+        <i class="fas fa-server"></i>
+      </div>
+      <h2 class="major__title">Back-end</h2>
+      <p class="major__description">
+        Java, JavaScript, Go, NodeJS,
+        <br />Rest APIs, GraphGL
+      </p>
+    </div>
+    <div class="major">
+      <div class="major__icon">
+        <i class="fas fa-server"></i>
+      </div>
+      <h2 class="major__title">Back-end</h2>
+      <p class="major__description">
+        Java, JavaScript, Go, NodeJS,
+        <br />Rest APIs, GraphGL
+      </p>
+    </div>
+  </div>
+  <div class="about__jobs">
+    <div class="job">
+      <img
+        src="imgs/jobs/logo-samsung.png"
+        alt="samsung"
+        class="job__logo"
+      />
+     <div class="job__description">
+      <p class="job__name">
+        Currently working at Samsung as Software Engineer
+      </p>
+      <p class="job__period">2019 Sept - Until now</p>
+     </div>
+    </div>
+    <div class="job">
+      <img
+        src="imgs/jobs/logo-samsung.png"
+        alt="samsung"
+        class="job__logo"
+      />
+      <div class="job__description">
+        <p class="job__name">
+          Currently working at Samsung as Software Engineer
+        </p>
+        <p class="job__period">2019 Sept - Until now</p>
+       </div>
+  </div>
+</section>
+<!-- Skills -->
+    <section id="skills" class="section">
     <h1>Skills</h1>
     <h2>Skills & Attributes</h2>
    <div class="skillset"></div>
@@ -103,10 +155,26 @@
                <div class="skill_value"></div>
            </div>
        </div>
-       
+       <div class="skillset__right">
+        <div class="tools">
+          <h3 class="skillset__title">Tools</h3>
+          <ul class="tools__list">
+            <li><span>Visual Studio Code</span></li>
+            <li><span>Eclipse</span></li>
+          </ul>
+        </div>
+        <div class="etc">
+          <h3 class="skillset__title">Etc</h3>
+          <ul class="etc__list">
+            <li><span>Git</span></li>
+          
+          </ul>
+        </div>
+      </div>
    </div>
-   
-    <section id="work"></section>
+   </section>
+   <!-- work -->
+    <section id="work" class="section">
     <h1>My work</h1>
     <h3>Projects</h3>
     <div class="work_projects">
@@ -114,9 +182,9 @@
             <img src="0" alt="">
         </a>
     </div>
-
-    
-    <section id="contact"></section>
+<!-- contact -->
+</section>
+    <section id="contact" class="section">
     <h1 class="contact_title">Contacts</h1>
     <h2 class="Contact_email">wlals2997@gmail.com</h2>
     <div class="contact_links">
@@ -128,9 +196,7 @@
    <p class="contact_rights">
        2021 web developer portfolio by Jimin Lee- All rights reserved
    </p>
-        
-
-
-    </li>
+         </li>
+        </section>
 </body>
 </html>
