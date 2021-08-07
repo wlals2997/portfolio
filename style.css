@@ -160,9 +160,12 @@ background-color: var(--color-dark-pink);
 /* about */
 .about__majors{
     display: flex;
-   justify-content: space-between; 
+   justify-content: center; 
    /* 공간 여백을 줌 */
 margin: 80px 0;
+flex-wrap: wrap;
+
+
   }
   .major__icon{
     width: 170px;
