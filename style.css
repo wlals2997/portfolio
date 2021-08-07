@@ -118,6 +118,15 @@ button{
 .navbar__menu__item:hover{
 background-color: var(--color-dark-pink);
 }
+.navbar__toggle-btn{
+  position: absolute;
+ top: 24px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+  /* 평소에는 토글버튼이 보여지면 안됨 */
+}
 /* Home */
 #home{
     background: url('imgs/home-backgorund.png') center/ cover no-repeat;
@@ -390,4 +399,36 @@ transition: all var(--animation--duration)ease-in;
 .contact_links i:hover{
   transform: scale(1.1);
   color: var(--color-yellow);
+}
+/* 반응형 */
+/* For below 768px screen width */
+@media screen and (max-width: 768px){
+  .navbar__toggle-btn{
+display: block;
+}
+#navbar{
+flex-direction: column;
+/* 위에서 아래로 */
+align-items: flex-start;
+/* 반대로 */
+}
+.navbar__menu{
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+.about__majors{
+  flex-direction: column;
+}
+.major{
+  margin-bottom: 38px;
+}
+.skillset{
+  flex-direction: column;
+}
+.project{
+  flex-grow: 1;
+  /* 화면이 작으면 플렉스 그로우를 이용해서 딱 맞게 커지도록 그로우가 알아서 화면을 메꿔주는 것 */
+}
 }
