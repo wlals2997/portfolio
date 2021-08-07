@@ -259,6 +259,110 @@ margin:20px 0;
  .tools{
    background-color: var(--color-grey);
  }
- .tools,.etc{
+ .tools,
+ .etc{
    padding: 20px;
  }
+ /* Work */
+ .category__btn{
+   border: 1px solid var(--color-dark-white);
+ border-radius: var(--size-border-radius);
+ font-size: var(--font-regular);
+ padding: 8px 48px;
+  }
+  .work__categories{
+    margin: 40px;
+  }
+  .category__btn.active,
+  .category__btn:hover{
+    background-color: var(--color-pink);
+    color:var(--color-white) ;
+  }
+  .category__btn.active .category__count,
+  .category__btn:hover .category__count{
+    opacity: 1;
+    top: 0;
+  }
+/* 카테고리 버튼이 액티브인 상태의 카테고리 카운트와 카테고리 버튼이 마우스가 올라왔을 때 안에있는 카테고리 카운트 일때만 / 탑을 다시 원래대로 0으로 만든다*/
+  .category__count{
+    border: 1px solid;
+    border-radius: 50%;
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    width: 24px;
+    height: 24px;
+display: inline-block;
+line-height: 24px;
+position: relative;
+/* realative는 움지이긴 움직이지만 원래 있던 자리는 그대로 차지하고 유지하는 상태로 움직이게 된다 */
+top: -20px;
+/* 탑포지션 */
+left: 4px;
+opacity: 0;
+/* 평소에는 opactiy를 0으로 해서 보이지 않도록 만들고 trasition을 준다 */
+transition: all var(--animation--duration)ease-in;
+/* ease-in: 애니메이션이 천천히 시작되고 최고 속도로 끝난다 <->ease-out*/
+  }
+  .work__projects{
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-wrap은 웹 문서 크기에 따라 알아서 이미지의 위치를 조절해준다*/
+    justify-content: center;
+  }
+  .project{
+    position: relative;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    width: 280px;
+    height: 250px;
+    margin: 2px;
+    margin: 2px;
+  background-color: var(--color-light-white);
+  }
+  .project__img{
+    max-width: 100%;
+    max-height: 100%;
+    align-items: center;
+    /* 이미지에 최고로 커질 수 있는 사이즈는 자기가 담겨 있는 통 안에서만 커져야 한다. 컨테이너를 넘어가면 안된다. */
+  }
+  /* 원래 들어있던 박스에서 벗어나서 위치를 바꾸는 것은 postion absolute */
+  
+  .project__description {
+    position: absolute;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    /* 위로 올라오는 느낌,10px정도 밑으로 내려 놨다가  */
+    transition: all var(--animation--duration)ease-in;
+}
+.project:hover .project__description{
+  opacity: 0.8;
+  transform: translateY(0px);
+  /* 마우스가 올라오면 다시 얘네를 원래 포지션으로 가지고 오는것 */
+}
+/* 프로젝트 클릭시 애니메이션 */
+.project__description h3{
+  color: var(--color-white);
+}
+.project__description h3:after{
+  /* h3 다음에 */
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: var(--color-dark-white);
+  display: block;
+  /* 한줄에 하나씩 */
+  position: relative;
+  left: 50%;
+  margin-left: -16px;
+  /* 중간에서 당겨오도록 */
+  margin-top: 8px;
+}
