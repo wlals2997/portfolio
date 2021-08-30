@@ -89,22 +89,22 @@ button{
     margin: 4px 0;
   }
 /* Navbar */
-#navbar{
-  position: fixed;
-  /* 위에 고정시켜놓기 */
+#navbar {
+  position: fixed;  /* 위에 고정시켜놓기 */
+  color: var(--color-dark-white);
   width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: transparent;
-    align-items: center;
-  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 16px;
-  transition: all var(--animation--duration)  ease-in-out;
-  z-index:  1;    /* z-index 우선순위 0이 default */
+  background-color: transparent;
+  transition: all var(--animation--duration) ease-in-out;
+  z-index: 1; /* z-index 우선순위 0이 default */
 }
+
 #navbar.navbar--dark{
-  background-color: var(--color-dark-pink);
-  padding: 8px;
+  background-color: var(--color-pink);
+  padding: 3px;
   
 }
 .navbar__menu{
@@ -144,6 +144,12 @@ background-color: var(--color-dark-pink);
     padding: 40px;
     padding-top: 120px ;
     text-align: center;
+    background-color: transparent;
+}
+#home.navbar--dark{
+  background-color: var(--color-pink);
+  padding: 8px;
+  
 }
 .home_avatar{
     width: 250px;
