@@ -383,19 +383,20 @@ transition: all var(--animation--duration)ease-in;
 }
 /* 프로젝트 클릭시 애니메이션 */
 .project__description h3{
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 .project__description h3:after{
   /* h3 다음에 */
   content: "";
-  width: 25px;
+  width: 50px;
   height: 2px;
   background-color: var(--color-dark-white);
   display: block;
   /* 한줄에 하나씩 */
   position: relative;
   left: 50%;
-  margin-left: -16px;
+  transform: translateX(-50%);/* 중간에 */
+  /* margin-left: -16px; */
   /* 중간에서 당겨오도록 */
   margin-top: 8px;
 }
@@ -449,16 +450,21 @@ transition: all var(--animation--duration)ease-in;
 display: block;
 }
 #navbar{
-flex-direction: column;
-/* 위에서 아래로 */
-align-items: flex-start;
-/* 반대로 */
+flex-direction: column;/* 위에서 아래로 */
+align-items: flex-start;/* 반대로 */
+background-color: var(--color-pink);
+}
+#navbar.navbar--dark{
+  padding: 16px;
 }
 .navbar__menu{
   flex-direction: column;
   text-align: center;
   width: 100%;
   display: none;
+}
+.navbar__menu.open{
+  display: block;
 }
 .about__majors{
   flex-direction: column;
