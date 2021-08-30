@@ -25,3 +25,26 @@ console.log(event.target.dataset.link);
 const scrollTo= document.querySelector(link);
 scrollTo.scrollIntoView({behavior:"smooth"});
 });
+
+// Handle click on "contact me" button on home
+const contactBtn = document.querySelector('.home_contact');
+contactBtn.addEventListener('click', (event) =>{
+const target = event.target;
+const link = target.dataset.link;
+if(link==null) {
+    return;
+}
+console.log(event.target.dataset.link);
+const scrollTo= document.querySelector(link);
+scrollTo.scrollIntoView({behavior:"smooth"});
+});
+
+// Handle click on "contact me" button on home
+// const contactBtn = document.querySelector('.home_contact');
+// contactBtn.addEventListener('click', (event) =>{
+//     scrollIntoView(`#contact`);
+// });
+// function scrollIntoView(selector){
+//     const scrollTo= document.querySelector(link);
+// scrollTo.scrollIntoView({behavior:"smooth"});
+// }
