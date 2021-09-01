@@ -50,7 +50,7 @@ body{
 }
 a{
     text-decoration: none;
-color: var(--color-dark-blue);
+color: var(--color-light-blue);
 }
 ul{
     padding-left: 0;
@@ -325,7 +325,7 @@ margin:20px 0;
   }
   .category__btn.active,
   .category__btn:hover{
-    background-color: var(--color-pink);
+    background-color: var(--color-blue);
     color:var(--color-white) ;
   }
   .category__btn.active .category__count,
@@ -337,8 +337,8 @@ margin:20px 0;
   .category__count{
     border: 1px solid;
     border-radius: 50%;
-    background-color: var(--color-orange);
-    color: var(--color-white);
+    background-color: var(--color-light-blue);
+    color: var(--color-dark-blue);
     width: 24px;
     height: 24px;
 display: inline-block;
@@ -402,7 +402,7 @@ transition: all var(--animation--duration)ease-in;
 }
 /* 프로젝트 클릭시 애니메이션 */
 .project__description h3{
-  color: var(--color-orange);
+  color: var(--color-light-blue);
 }
 .project__description h3:after{
   /* h3 다음에 */
