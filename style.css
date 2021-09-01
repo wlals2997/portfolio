@@ -305,7 +305,7 @@ margin:20px 0;
   flex-basis: 40%;
  }
  .tools{
-   background-color: var(--color-grey);
+   background-color: #5e5858;
  }
  .tools,
  .etc
@@ -506,9 +506,11 @@ background-color: var(--color-pink);
   margin-top:30px ;
   margin-bottom: 0px;
 }
-.about__jobs i{
- 
+
+.toolskill{
+  flex-shrink: 1;
 }
+
 .major{
   margin-bottom: 30px;
 }
@@ -520,6 +522,15 @@ background-color: var(--color-pink);
 .skillset{
   flex-direction: column;
 }
+.tools img{
+  /* 이미지 자동줄임 */
+    max-width: 100%;
+    height: auto;
+  
+}
+
+
+
 .project{
   flex-grow: 1;
   /* 화면이 작으면 플렉스 그로우를 이용해서 딱 맞게 커지도록 그로우가 알아서 화면을 메꿔주는 것 */
