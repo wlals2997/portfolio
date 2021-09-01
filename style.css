@@ -266,7 +266,7 @@ color: var(--color-pink);
 
  .skillset{
    display: flex;
-background-color: var(--color-light-grey);
+background-color: #5e5858;
 color: var(--color-light-white);
 margin:20px 0;
  }
