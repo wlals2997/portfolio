@@ -50,7 +50,7 @@ body{
 }
 a{
     text-decoration: none;
-color: var(--color-dark-blue);
+color: var(--color-blue);
 }
 ul{
     padding-left: 0;
