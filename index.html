@@ -39,7 +39,7 @@
 <!-- Home -->
 <section id="home">
     <img src="imgs/나.png" alt="Jimin's profile image" class="home_avatar"/>
-    <h1 class="home_title">System.out.println("Hi!");</h1>
+    <h1 class="home_title">Web Developer</h1>
     <h2 class="home_description">"No bees, no honey"</h2>
     <h3 class="home_description">노력(벌)이 없으면 큰 성과(꿀)가 없다.</h3>
     <button class="home_contact" data-link="#contact">contact me</button>
@@ -198,14 +198,14 @@
     <h1>works</h1>
   
     <div class="work__categories">
-      <button class="category__btn">All<span class="category__count">1</span></button>
+      <button class="category__btn active" data-filter="*">All<span class="category__count">3</span></button>
       <!-- span은 컨텐츠를 꽉 감싸주는 사이즈로 정해진다 -->
-      <button class="category__btn">Front-end<span class="category__count">3</span></button>
-      <button class="category__btn">Mobile<span class="category__count">1</span></button>
+      <button class="category__btn"data-filter="front-end">Front-end<span class="category__count">3</span></button>
+      <button class="category__btn"data-filter="mobile">Mobile<span class="category__count">1</span></button>
     </div>
     
     <div class="work_projects">
-        <a href="https://wlals2997.github.io/CampingCommunitysite/" class="project" target="blank">
+        <a href="https://wlals2997.github.io/CampingCommunitysite/" class="project" target="blank" data-type="front-end">
           <!-- 링크:깃허브 연결 -->
             <img class="project__img" src="imgs/projects/Webp.net-resizeimage.png" alt="CampingCommunity"/>
             <div class="project__description">
@@ -213,7 +213,7 @@
               <span>캠핑러들을 위한<br> 캠핑 커뮤니티사이트</span>
             </div>
         </a>
-        <a href="https://wlals2997.github.io/drumkit/" class="project" target="blank">
+        <a href="https://wlals2997.github.io/drumkit/" class="project" target="blank" data-type="front-end">
           <!-- 링크:깃허브 연결 -->
             <img class="project__img" src="imgs/drum.jpg" alt="drumkit"/>
             <div class="project__description">
@@ -222,7 +222,7 @@
             </div>
         </a>
         
-        <a href="https://wlals2997.github.io/Youtube/" class="project" target="blank">
+        <a href="https://wlals2997.github.io/Youtube/" class="project" target="blank" data-type="front-end,mobile">
           <!-- 링크:깃허브 연결 -->
             <img class="project__img" src="imgs/mobile.jpg" alt="Youtubemobile"/>
             <div class="project__description">

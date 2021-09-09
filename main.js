@@ -82,3 +82,32 @@ arrowUp.addEventListener('click', () => {
   const scrollTo = document.querySelector('#home');  // 함수정의
   scrollTo.scrollIntoView();
 });
+
+//Projects
+const workbtnContainer=document.querySelector('.work__categories');
+const projectContainer=document.querySelector('.work_projects');
+const projects=document.querySelectorAll('.project');
+
+workbtnContainer.addEventListener('click', (e)=>{
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if(filter==null){
+    return;
+  }
+  projectContainer.classList.add('.anim-out');
+  setTimeout(()=>{
+  projects.forEach((project) => {
+    console.log(project.dataset.type);
+    if (filter === '*' || project.dataset.type.includes(filter)) {
+      project.classList.remove('invisible');
+    } else {
+      project.classList.add('invisible');
+    }
+  });
+
+    projectContainer.classList.remove('.anim-out');
+  },300)
+});
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
