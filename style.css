@@ -303,10 +303,13 @@ margin:20px 0;
  }
  .skillset__right{
   flex-basis: 40%;
+ 
  }
  .tools{
    background-color: #5e5858;
+ 
  }
+
  .tools,
  .etc
  .osdb{
@@ -534,10 +537,8 @@ background-color: var(--color-pink);
   /* 이미지 자동줄임 */
     max-width: 100%;
     height: auto;
-  
+ 
 }
-
-
 
 .project{
   flex-grow: 1;
