@@ -303,17 +303,23 @@ margin:20px 0;
  }
  .skillset__right{
   flex-basis: 40%;
- 
+
  }
  .tools{
-   background-color: #5e5858;
+ 
+ 
+ }
+ .tools img{
+   justify-content: center;
+   max-width: 100%;
+   max-height: 100%;
  
  }
 
  .tools,
  .etc
  .osdb{
-   padding: 20px;
+   padding-top: 80px;
  }
  /* Work */
  .category__btn{
@@ -537,7 +543,7 @@ background-color: var(--color-pink);
   /* 이미지 자동줄임 */
     max-width: 100%;
     height: auto;
- 
+    
 }
 
 .project{
