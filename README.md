@@ -16,5 +16,6 @@
 - [x] Contact 
 ---
 ## Skills
+- css animation
 - Responsive Web
 - Java Script
