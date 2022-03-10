@@ -42,12 +42,13 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
 }
 a {
   text-decoration: none;
-  color: #ADBB6D;
+  color: #adbb6d;
 }
 ul {
   padding-left: 0;
@@ -91,42 +92,35 @@ p {
 }
 /* Navbar */
 #navbar {
-  position: fixed; /* 위에 고정시켜놓기 */
-  color: var(--color-dark-blue);
+  position: fixed;
+  color: rgba(0, 0, 0, 0.4);
   width: 100%;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #E3ED9B;
+  background-color: #e3ed9b;
   transition: all var(--animation--duration) ease-in-out;
   z-index: 1; /* z-index 우선순위 0이 default */
 }
 
 #navbar.navbar--dark {
-  background-color:#ADBB6D;
-  padding: 3px;
+  background-color: #adbb6d;
 }
 .navbar__menu {
   display: flex;
+  justify-content: right;
 }
-.navbar_logo {
-  font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bold);
-}
+
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
   border-radius: var(--size-border-radius);
   border: 1px solid transparent;
-  /* 커서를 올리면 손모양으로 바뀜 ,메뉴 클래스를 active로 바꿔야함  */
 }
-.navbar__menu__item.active{
-    border: 3px solid white;
+.navbar__menu__item.active {
+  border: 3px solid white;
 }
 .navbar__menu__item:hover {
-  /* border: 1px solid white;  */
   background-color: var(--color-white);
   border-radius: var(--size-border-radius);
 }
@@ -134,33 +128,22 @@ p {
   position: absolute;
   top: 24px;
   right: 32px;
-  font-size: 24px;
+  font-size: 20px;
   color: var(--color-white);
   display: none;
-  /* 평소에는 토글버튼이 보여지면 안됨 */
-}
-
-/* Home */
-.transparent {
-  opacity: 1;
 }
 #home {
   background-color: #ffffcd;
-  padding:100px 40px;
+  padding: 100px 40px;
   padding-top: 170px;
   text-align: center;
-}
-#home.navbar--dark {
-  background-color: var(--color-pink);
-  padding: 8px;
 }
 .home_avatar {
   width: 270px;
   height: 270px;
   border-radius: 50%;
-  
 }
-.description{
+.description {
   width: 240px;
   height: 200px;
   margin: auto;
@@ -168,22 +151,22 @@ p {
   justify-content: center;
   align-items: center;
 }
-.home_title,
+
 .home_description {
   color: var(--color-black);
 }
 .home_contact {
-  color: #ADBB6D;
+  color: #adbb6d;
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
   margin-top: 50px;
   padding: 8px 12px;
-  border: 2px solid #ADBB6D;
+  border: 2px solid #adbb6d;
 
   border-radius: 4px;
 }
 .home_contact:hover {
-  background-color:#ADBB6D;
+  background-color: #adbb6d;
   color: white;
 }
 /* Section common */
@@ -191,7 +174,6 @@ p {
   padding: 50px;
   text-align: center;
   margin: auto;
-  /* 마진으로 양쪽 너비가 골고루 배치됨 */
 }
 .section__container {
   max-width: 1200px;
@@ -202,7 +184,6 @@ p {
 .about__majors {
   display: flex;
   justify-content: center;
-  /* 공간 여백을 줌 */
   justify-content: space-between;
   margin: 80px 0;
   flex-wrap: wrap;
@@ -211,14 +192,11 @@ p {
   width: 170px;
   height: 170px;
   line-height: 170px;
-  /* 수직적으로 중간으로 오도록 */
   font-size: 70px;
-  border: 1px solid var(--color-dark-mint);
-  color: var(--color-dark-mint);
-  /* 아이콘 컬러 바꾸기 */
+  border: 1px solid #adbb6d;
+  color: #adbb6d;
   border-radius: 50%;
   margin-bottom: 16px;
-  /* 아이콘 아래에 여백 주기 */
   margin: auto;
 }
 .major__title,
@@ -230,24 +208,18 @@ p {
 }
 .major__icon i {
   transition: all var(--animation--duration) ease;
-  /* 모든 속성값들을 animation 할 것이다./ 250~300ms 는 표준화된 좋은수치 */
 }
 .major__icon:hover i {
-  /* hover i : 아이콘에만 효과를 주겠다. */
-  color: var(--color-blue);
   transform: scale(1.3);
-  /* 움직이거나 크기를 키울때 transform 
-    rotate(회전) scale(크기키우기)*/
 }
 .job {
   display: flex;
   align-items: center;
-  color:#ADBB6D;
+  color: #adbb6d;
 }
 .job__description {
   margin: 0 16px;
   text-align: left;
-  /* 왼쪽으로 정렬 */
 }
 .job__name,
 .job__period {
@@ -262,18 +234,15 @@ p {
 #skills {
   background-color: #ffffcd;
 }
-
 .skillset {
   display: flex;
-  background-color: #5e5858;
+  background-color: var(--color-dark-grey);
   color: var(--color-light-white);
   margin: auto;
-  width:70%;
-  
+  width: 70%;
+  padding: 15px;
 }
-.skillset__title {
-  color: var(--color-white);
-}
+
 .skill__description {
   display: flex;
   justify-content: space-between;
@@ -291,8 +260,8 @@ p {
   height: 3px;
   background-color: var(--color-orange);
 }
-.skillset__left {
-  width:100%;
+.skillset__container {
+  width: 100%;
   padding: 20px 40px;
 }
 /* Work */
@@ -308,7 +277,7 @@ p {
 }
 .category__btn.selected,
 .category__btn:hover {
-  background-color:#ADBB6D;
+  background-color: #adbb6d;
   color: var(--color-white);
 }
 .category__btn.active .category__count,
@@ -316,23 +285,20 @@ p {
   opacity: 1;
   top: 0;
 }
-
 .category__count {
   border: 1px solid;
   border-radius: 50%;
   background-color: white;
-  color: #ADBB6D;
+  color: #adbb6d;
   width: 24px;
   height: 24px;
   display: inline-block;
   line-height: 24px;
-  position: ;
   position: relative;
   top: -20px;
   left: 4px;
   opacity: 0;
   transition: all var(--animation--duration) ease-in;
-  
 }
 .work_projects {
   display: flex;
@@ -375,7 +341,6 @@ p {
   left: 0;
   opacity: 0;
   transform: translateY(10px);
-  /* 위로 올라오는 느낌,10px정도 밑으로 내려 놨다가  */
   transition: all var(--animation--duration) ease-in;
 }
 .project:hover .project__description {
@@ -386,7 +351,7 @@ p {
 .project__description h3 {
   color: white;
 }
-.project__description span{
+.project__description span {
   color: white;
 }
 .project__description h3:after {
@@ -398,12 +363,12 @@ p {
   display: block;
   position: relative;
   left: 50%;
-  transform: translateX(-50%); 
+  transform: translateX(-50%);
   margin-top: 8px;
 }
 /* Contact */
 #contact {
-  background-color: #E3ED9B;
+  background-color: #e3ed9b;
 }
 .contact_title,
 .contact_email,
@@ -417,12 +382,11 @@ p {
   font-size: var(--font-large);
   margin: 24px 0;
   transition: all var(--animation--duration) ease-in;
-  
 }
 
 .contact_links i:hover {
   transform: scale(1.1);
-  color:#ADBB6D;
+  color: #adbb6d;
 }
 /* Scroll */
 .arrow-up {
@@ -433,7 +397,7 @@ p {
   height: 70px;
   font-size: 50px;
   color: var(--color-white);
-  background-color: #ADBB6D;
+  background-color: #adbb6d;
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
@@ -445,7 +409,6 @@ p {
   pointer-events: auto;
 }
 /* 반응형 */
-/* For below 768px screen width */
 @media screen and (max-width: 768px) {
   :root {
     /* Font size */
@@ -462,13 +425,10 @@ p {
     font-size: var(--font-medium);
   }
   #navbar {
-    flex-direction: column; /* 위에서 아래로 */
-    align-items: flex-start; /* 반대로 */
-    background-color: #ADBB6D;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #adbb6d;
     padding: 30px;
-  }
-  #navbar.navbar--dark {
-    padding: 16px;
   }
   .navbar__menu {
     flex-direction: column;
@@ -483,23 +443,20 @@ p {
     padding: 16px;
     padding-top: 40px;
   }
+  .home_description {
+    font-size: 30px;
+  }
   .about__majors {
     flex-direction: column;
     margin-top: 30px;
     margin-bottom: 0px;
   }
-
-  .toolskill {
-    flex-shrink: 1;
-  }
-
   .major {
     margin-bottom: 30px;
   }
   .category__btn {
     margin: 4px 0;
     width: 100%;
-    /* padding:8px; */
   }
   .skillset {
     flex-direction: column;
@@ -509,10 +466,8 @@ p {
     max-width: 100%;
     height: auto;
   }
-
   .project {
     flex-grow: 1;
-    /* 화면이 작으면 플렉스 그로우를 이용해서 딱 맞게 커지도록 그로우가 알아서 화면을 메꿔주는 것 */
   }
   .arrow-up {
     width: 50px;

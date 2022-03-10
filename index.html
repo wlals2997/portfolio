@@ -18,11 +18,8 @@
 <body>
     
  <!-- Navbar -->
-    <nav id="navbar">
-    <div class="navbar_logo">
-    
-    </div>
-        <ul class="navbar__menu ">
+    <nav id="navbar" >
+        <ul class="navbar__menu">
          <li class="navbar__menu__item active" data-link="#about">About</li>
          <li class="navbar__menu__item " data-link="#skills" >Skills</li>
          <li class="navbar__menu__item " data-link="#work">Project</li>
@@ -38,10 +35,9 @@
 <!-- Home -->
 <section id="home">
     <img src="imgs/나.png" alt="Jimin's profile image" class="home_avatar"/>
-<div class="description">
+    <div class="description">
     <h2 class="home_description"></h2>
-   
-  </div>
+    </div>
     <button class="home_contact" data-link="#contact">contact me</button>
 </section>
 
@@ -109,13 +105,8 @@
 <section id="skills" class="section">
   <div class="section__container">
     <h1>Skills</h1>
-    <h2>Skills & Attributes</h2>
-    <p>
-     
-    </p>
     <div class="skillset">
-      <div class="skillset__left">
-        <h3 class="skillset__title">Skills</h3>
+      <div class="skillset__container">
         <div class="skill">
           <div class="skill__description">
             <span>HTML</span>
@@ -165,23 +156,18 @@
       </div>
   </div>
   </div>
-  
 </section>
    <!-- work -->
     <section id="work" class="section">
     <div class="section__container">
     <h1>Project</h1>
-  
     <div class="work__categories">
       <button class="category__btn selected" data-fillter="*">All<span class="category__count">3</span></button>
-      <!-- span은 컨텐츠를 꽉 감싸주는 사이즈로 정해진다 -->
       <button class="category__btn"data-fillter="front-end">Front-end<span class="category__count">3</span></button>
       <button class="category__btn"data-fillter="mobile">Mobile<span class="category__count">1</span></button>
     </div>
-    
     <div class="work_projects">
-        <a href="https://github.com/wlals2997/CampingCommunity1" class="project" target="blank" data-type="front-end">
-          <!-- 링크:깃허브 연결 -->
+        <a href="https://github.com/wlals2997/CampingCommunity1" class="project" target="blank" data-type="front-end">      
             <img class="project__img" src="imgs/camping.png" alt="CampingCommunity"/>
             <div class="project__description">
               <h3>Camping Community</h3>
@@ -189,25 +175,20 @@
             </div>
         </a>
         <a href="https://wlals2997.github.io/drumkit/" class="project" target="blank" data-type="front-end">
-          <!-- 링크:깃허브 연결 -->
             <img class="project__img" src="imgs/drum.jpg" alt="drumkit"/>
             <div class="project__description">
               <h3>drumkit</h3>
               <span>키보드를 입력하여<br> 드럼소리를 내어보아요</span>
             </div>
         </a>
-        
         <a href="https://wlals2997.github.io/Youtube/index.html" class="project" target="blank" data-type="front-end mobile">
-          <!-- 링크:깃허브 연결 -->
             <img class="project__img" src="imgs/mobile.jpg" alt="Youtubemobile"/>
             <div class="project__description">
               <h3>Youtube</h3>
               <span>유튜브사이트 입니다.</span>
             </div>
         </a>
-        
     </div>
-    
   </div>
 </section>
 <!-- contact -->
@@ -217,13 +198,11 @@
     <div class="contact_links">
         <a href="https://github.com/wlals2997" target="_blank">
             <i class="fab fa-github"></i>   
-            
             </a>
     </div>
    <p class="contact_rights">
        2021 web developer portfolio by Jimin Lee- All rights reserved
    </p>
-    
         </section>
 <!-- Arrow up -->
 <button class="arrow-up">
