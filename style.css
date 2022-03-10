@@ -1,461 +1,428 @@
 /* Global */
 
 :root {
-    /* Color */
-    --color-white: #ffffff;
-    --color-light-white: #eeeeee;
-    --color-dark-white: #bdbdbd;
-    --color-pink: #fe918d;
-    --color-dark-pink: #ff6863;
-    --color-dark-grey: #4d4d4d;
-    --color-grey: #616161;
-    --color-light-grey: #7c7979;
-    --color-light-blue:#ecfffd;
-    --color-blue: #73aace;
-    --color-dark-blue:#2c413e;
-    --color-yellow: #fff7d1;
-    --color-orange: #feb546;
-    --color-black: #000000;
-    --color-dark-mint:#88c399;
-    --color-light-mint:#b9f6ca;
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-light-blue: #ecfffd;
+  --color-blue: #73aace;
+  --color-dark-blue: #2c413e;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+  --color-dark-mint: #88c399;
+  --color-light-mint: #b9f6ca;
 
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
 
-    
-  
-    /* Font size */
-    --font-large: 48px;
-    --font-medium: 28px;
-    --font-regular: 18px;
-    --font-small: 16px;
-    --font-micro: 14px;
-  
-    /* Font weight */
-    --weight-bold: 700;
-    --weight-semi-bold: 600;
-    --weight-regular: 400;
- 
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
   /* size */
---size-border-radius:4px;
+  --size-border-radius: 4px;
 
- /* Animation */
- --animation--duration:300ms;
+  /* Animation */
+  --animation--duration: 300ms;
 }
 /* Universal tags*/
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
-a{
-    text-decoration: none;
-color: var(--color-blue);
+a {
+  text-decoration: none;
+  color: #ADBB6D;
 }
-ul{
-    padding-left: 0;
+ul {
+  padding-left: 0;
 }
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
-button{
-    background-color: transparent;
-    /* transparent:배경색이 없다 */
-    cursor: pointer;
-    border: none;
-    outline: none;
-    /* 버튼의 아웃라인 */
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
-  /* Typography */
-  
-  h1 {
-    font-size: var(--font-large);
-    font-weight: var(--weight-bold);
-    color: var(--color-black);
-    margin: 16px 0px;
-  }
-  
-  h2 {
-    font-size: var(--font-medium);
-    font-weight: var(--weight-semi-bold);
-    color: var(--color-black);
-    margin: 30px 0;
-  }
-  
-  h3 {
-    font-size: var(--font-regular);
-    font-weight: var(--weight-regular);
-    color: var(--color-black);
-    margin: 8px 0;
-  }
-  
-  p {
-    font-size: var(--font-regular);
-    font-weight: var(--weight-regular);
-    color: var(--color-black);
-    margin: 4px 0;
-  }
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 30px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0;
+}
 /* Navbar */
 #navbar {
-  position: fixed;  /* 위에 고정시켜놓기 */
+  position: fixed; /* 위에 고정시켜놓기 */
   color: var(--color-dark-blue);
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
-  background-color: transparent;
+  padding: 10px;
+  background-color: #E3ED9B;
   transition: all var(--animation--duration) ease-in-out;
   z-index: 1; /* z-index 우선순위 0이 default */
 }
 
-#navbar.navbar--dark{
-  background-color: var(--color-dark-mint);
+#navbar.navbar--dark {
+  background-color:#ADBB6D;
   padding: 3px;
-  
 }
-.navbar__menu{
-    display:flex;
-    
+.navbar__menu {
+  display: flex;
 }
-.navbar_logo{
-    font-size: var(--font-medium);
+.navbar_logo {
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
 }
-.navbar__menu__item{
-    padding: 8px 12px;
-    margin:0 4px;
-    cursor: pointer;
-    border-radius: var(--size-border-radius);
-    border: 1px solid transparent;
-    ;
-    /* 커서를 올리면 손모양으로 바뀜 ,메뉴 클래스를 active로 바꿔야함  */
+.navbar__menu__item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: var(--size-border-radius);
+  border: 1px solid transparent;
+  /* 커서를 올리면 손모양으로 바뀜 ,메뉴 클래스를 active로 바꿔야함  */
 }
-/* .navbar__menu__item.active{
-    border: 1px solid white;
-} */
-.navbar__menu__item:hover{
-/* border: 1px solid white;  */
-background-color: var(--color-white); 
-border-radius:var(--size-border-radius);
+.navbar__menu__item.active{
+    border: 3px solid white;
 }
-.navbar__toggle-btn{
+.navbar__menu__item:hover {
+  /* border: 1px solid white;  */
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+.navbar__toggle-btn {
   position: absolute;
- top: 24px;
+  top: 24px;
   right: 32px;
   font-size: 24px;
   color: var(--color-white);
   display: none;
   /* 평소에는 토글버튼이 보여지면 안됨 */
 }
+
 /* Home */
-#home{
-    background: url('imgs/home-backgorund.png') center/ cover no-repeat;
-    /* 센터에다가 두면서 커버 반응형으로 되도록 그리고 no-reapet 반복하지 않게 =자동으로 사이즈가 늘어나면서 반응형으로 만들어진다. */
-    padding: 40px;
-    padding-top: 120px ;
-    text-align: center;
-    background-color: transparent;
+.transparent {
+  opacity: 1;
 }
-#home.navbar--dark{
+#home {
+  background-color: #ffffcd;
+  padding:100px 40px;
+  padding-top: 170px;
+  text-align: center;
+}
+#home.navbar--dark {
   background-color: var(--color-pink);
   padding: 8px;
+}
+.home_avatar {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
   
 }
-.home_avatar{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    /* 사진을 동그랗게 만들어준다 */
-    border:2px solid var(--color-light-white);
-}
-.home_title,
-.home_description{
-    color: var(--color-white);
-}
-.home_contact{
-   color: var(--color-white);
-    font-size: var(--font-regular);
-    font-weight: var(--weight-bold);
-    margin:24px;
-    padding:8px 12px;
-    border:2px solid var(--color-white) ;
-    border-radius: 4px;
-}
-.home_contact:hover{
-  background-color: var(--color-blue);
-}
-/* Section common */
-.section{
-    padding: 50px;
-   text-align: center; 
-   margin: auto;
-   /* 마진으로 양쪽 너비가 골고루 배치됨 */
-}
-.section__container{
-  max-width: 1200px;
-   /* 최대크기:데스크탑 1000~1200이 가장 최적화된 크기*/
-   margin: auto;
-}
-/* about */
-.about__majors{
-    display:flex;
-   justify-content: center; 
-   /* 공간 여백을 줌 */
-   justify-content: space-between;
-margin: 80px 0;
-flex-wrap: wrap;
-;
-
-  }
-  .major__icon{
-    width: 170px;
-    height: 170px;
-    line-height:170px ;
-    /* 수직적으로 중간으로 오도록 */
-    font-size: 70px;
-   border:1px solid var(--color-dark-mint);
-   color: var(--color-dark-mint);
-   /* 아이콘 컬러 바꾸기 */
-   border-radius: 50%;
-   margin-bottom: 16px;
-   /* 아이콘 아래에 여백 주기 */
-    margin: auto;
-  }
-  .major__title,.major__description{
-    color: var(--color-dark-grey);
-  }
-  .major__description{
-    font-size: var(--font-regular);
-  }
-  .major__icon i{
-    transition: all var(--animation--duration) ease;
-    /* 모든 속성값들을 animation 할 것이다./ 250~300ms 는 표준화된 좋은수치 */
-  }
-  .major__icon:hover i{
-    /* hover i : 아이콘에만 효과를 주겠다. */
-    color:var(--color-blue);
-    transform: scale(1.3);
-    /* 움직이거나 크기를 키울때 transform 
-    rotate(회전) scale(크기키우기)*/
-  }
- .job{
-   display: flex;
-   align-items: center;
-color: var(--color-pink);
- }
- .job__description{
-   margin: 0 16px;
-   text-align: left;
-   /* 왼쪽으로 정렬 */
-   
- }
- .job__name,.job__period{
-   color: var(--color-light-grey);
- }
- .job__name{
-   font-size: var(--font-small);
- }
- .job__period{
-   font-size: var(--font-micro);
- }
- #skills{
-   background-color: var(--color-light-blue);
- }
-
- .skillset{
-   display: flex;
-background-color: #5e5858;
-color: var(--color-light-white);
-margin:20px 0;
- }
- .osdb{
-   background-color:var(--color-grey);
- }
- .skillset__title{
-   color: var(--color-white);
- }
- .skill__description{
-   display: flex;
-   justify-content: space-between;
- }
- .skill__bar{
-   width: 100%;
-   height: 3px;
-   background-color: var(--color-grey);
-   
- }
- .skill{
-   margin-bottom: 32px;
-   
- }
- .skill__value{
-   width: 70%;
-   height: 3px;
-   background-color: var(--color-orange);
- }
- .skillset__left{
-   flex-basis: 60%;
-   /* flex-basis: flex items 각각의 공간을 배분하기 전 기본 너비 설정 */
-   background-color: var(--color-dark-grey);
-   padding: 20px 40px;
- }
- .skillset__right{
-  flex-basis: 40%;
-
- }
- .tools{
- 
- 
- }
- .tools img{
-   justify-content: center;
-   max-width: 100%;
-   max-height: 100%;
- 
- }
-
- .tools,
- .etc
- .osdb{
-   padding-top: 80px;
- }
- /* Work */
- .category__btn{
-   border: 1px solid var(--color-dark-white);
- border-radius: var(--size-border-radius);
- font-size: var(--font-regular);
- padding: 8px 48px;
- position: relative;
-  }
-  .work__categories{
-    margin: 40px;
-  }
-  .category__btn.active,
-  .category__btn:hover{
-    background-color: var(--color-blue);
-    color:var(--color-white) ;
-  }
-  .category__btn.active .category__count,
-  .category__btn:hover .category__count{
-    opacity: 1;
-    top: 0;
-  }
-/* 카테고리 버튼이 액티브인 상태의 카테고리 카운트와 카테고리 버튼이 마우스가 올라왔을 때 안에있는 카테고리 카운트 일때만 / 탑을 다시 원래대로 0으로 만든다*/
-  .category__count{
-    border: 1px solid;
-    border-radius: 50%;
-    background-color: var(--color-light-blue);
-    color: var(--color-dark-blue);
-    width: 24px;
-    height: 24px;
-display: inline-block;
-line-height: 24px;
-position: ;
-position: relative;
-/* realative는 움지이긴 움직이지만 원래 있던 자리는 그대로 차지하고 유지하는 상태로 움직이게 된다 */
-top: -20px;
-/* 탑포지션 */
-
-left: 4px;
-opacity: 0;
-/* 평소에는 opactiy를 0으로 해서 보이지 않도록 만들고 trasition을 준다 */
-transition: all var(--animation--duration)ease-in;
-/* ease-in: 애니메이션이 천천히 시작되고 최고 속도로 끝난다 <->ease-out*/
-  }
-  .work_projects{
-    display: flex;
-    flex-wrap: wrap;
-    /* flex-wrap은 웹 문서 크기에 따라 알아서 이미지의 위치를 조절해준다*/
-    justify-content: center;
-    opacity: 1;
-    transition: all var(--animation-duration) ease-out;
-  }
-  .work_projects.anim-out{
-opacity: 0;
-transform: scale(0.9) translateY(40px);
-  }
-  .project{
-    position: relative;
-    display: flex;
+.description{
+  width: 240px;
+  height: 200px;
+  margin: auto;
+  display: flex;
   justify-content: center;
   align-items: center;
-    width: 280px;
-    height: 250px;
-    margin: 2px;
-  background-color: var(--color-light-white);
-  }
-  .project.invisible{
-    display:none ;
-  }
-  .project__img{
-    max-width: 100%;
-    max-height: 100%;
-    align-items: center;
-    /* 이미지에 최고로 커질 수 있는 사이즈는 자기가 담겨 있는 통 안에서만 커져야 한다. 컨테이너를 넘어가면 안된다. */
-  }
-  /* 원래 들어있던 박스에서 벗어나서 위치를 바꾸는 것은 postion absolute */
-  
-  .project__description {
-    position: absolute;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transform: translateY(10px);
-    /* 위로 올라오는 느낌,10px정도 밑으로 내려 놨다가  */
-    transition: all var(--animation--duration)ease-in;
 }
-.project:hover .project__description{
+.home_title,
+.home_description {
+  color: var(--color-black);
+}
+.home_contact {
+  color: #ADBB6D;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin-top: 50px;
+  padding: 8px 12px;
+  border: 2px solid #ADBB6D;
+
+  border-radius: 4px;
+}
+.home_contact:hover {
+  background-color:#ADBB6D;
+  color: white;
+}
+/* Section common */
+.section {
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+  /* 마진으로 양쪽 너비가 골고루 배치됨 */
+}
+.section__container {
+  max-width: 1200px;
+  /* 최대크기:데스크탑 1000~1200이 가장 최적화된 크기*/
+  margin: auto;
+}
+/* about */
+.about__majors {
+  display: flex;
+  justify-content: center;
+  /* 공간 여백을 줌 */
+  justify-content: space-between;
+  margin: 80px 0;
+  flex-wrap: wrap;
+}
+.major__icon {
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  /* 수직적으로 중간으로 오도록 */
+  font-size: 70px;
+  border: 1px solid var(--color-dark-mint);
+  color: var(--color-dark-mint);
+  /* 아이콘 컬러 바꾸기 */
+  border-radius: 50%;
+  margin-bottom: 16px;
+  /* 아이콘 아래에 여백 주기 */
+  margin: auto;
+}
+.major__title,
+.major__description {
+  color: var(--color-dark-grey);
+}
+.major__description {
+  font-size: var(--font-regular);
+}
+.major__icon i {
+  transition: all var(--animation--duration) ease;
+  /* 모든 속성값들을 animation 할 것이다./ 250~300ms 는 표준화된 좋은수치 */
+}
+.major__icon:hover i {
+  /* hover i : 아이콘에만 효과를 주겠다. */
+  color: var(--color-blue);
+  transform: scale(1.3);
+  /* 움직이거나 크기를 키울때 transform 
+    rotate(회전) scale(크기키우기)*/
+}
+.job {
+  display: flex;
+  align-items: center;
+  color:#ADBB6D;
+}
+.job__description {
+  margin: 0 16px;
+  text-align: left;
+  /* 왼쪽으로 정렬 */
+}
+.job__name,
+.job__period {
+  color: var(--color-light-grey);
+}
+.job__name {
+  font-size: var(--font-small);
+}
+.job__period {
+  font-size: var(--font-micro);
+}
+#skills {
+  background-color: #ffffcd;
+}
+
+.skillset {
+  display: flex;
+  background-color: #5e5858;
+  color: var(--color-light-white);
+  margin: auto;
+  width:70%;
+  
+}
+.skillset__title {
+  color: var(--color-white);
+}
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+.skill {
+  margin-bottom: 32px;
+}
+.skill__value {
+  width: 70%;
+  height: 3px;
+  background-color: var(--color-orange);
+}
+.skillset__left {
+  width:100%;
+  padding: 20px 40px;
+}
+/* Work */
+.category__btn {
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+  position: relative;
+}
+.work__categories {
+  margin: 40px;
+}
+.category__btn.selected,
+.category__btn:hover {
+  background-color:#ADBB6D;
+  color: var(--color-white);
+}
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+
+.category__count {
+  border: 1px solid;
+  border-radius: 50%;
+  background-color: white;
+  color: #ADBB6D;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  line-height: 24px;
+  position: ;
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all var(--animation--duration) ease-in;
+  
+}
+.work_projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 1;
+  transition: all var(--animation--duration) ease-out;
+}
+.work_projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
+}
+.project {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  background-color: var(--color-light-white);
+}
+.project.invisible {
+  display: none;
+}
+.project__img {
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+}
+.project__description {
+  position: absolute;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  /* 위로 올라오는 느낌,10px정도 밑으로 내려 놨다가  */
+  transition: all var(--animation--duration) ease-in;
+}
+.project:hover .project__description {
   opacity: 0.8;
   transform: translateY(0px);
-  /* 마우스가 올라오면 다시 얘네를 원래 포지션으로 가지고 오는것 */
 }
 /* 프로젝트 클릭시 애니메이션 */
-.project__description h3{
-  color: var(--color-light-blue);
+.project__description h3 {
+  color: white;
 }
-.project__description h3:after{
+.project__description span{
+  color: white;
+}
+.project__description h3:after {
   /* h3 다음에 */
-  content: "";
+  content: '';
   width: 50px;
   height: 2px;
   background-color: var(--color-dark-white);
   display: block;
-  /* 한줄에 하나씩 */
   position: relative;
   left: 50%;
-  transform: translateX(-50%);/* 중간에 */
-  /* margin-left: -16px; */
-  /* 중간에서 당겨오도록 */
+  transform: translateX(-50%); 
   margin-top: 8px;
 }
 /* Contact */
-#contact{
-  background-color: var(--color-dark-mint);
+#contact {
+  background-color: #E3ED9B;
 }
 .contact_title,
 .contact_email,
-.contact_rights{
-  color: var(--color-white);
+.contact_rights {
+  color: black;
 }
-.contact_title{
+.contact_title {
   margin: 32px 0;
 }
-.contact_links{
+.contact_links {
   font-size: var(--font-large);
   margin: 24px 0;
   transition: all var(--animation--duration) ease-in;
+  
 }
 
-.contact_links i:hover{
+.contact_links i:hover {
   transform: scale(1.1);
-  color: var(--color-yellow);
+  color:#ADBB6D;
 }
 /* Scroll */
 .arrow-up {
@@ -466,9 +433,8 @@ transform: scale(0.9) translateY(40px);
   height: 70px;
   font-size: 50px;
   color: var(--color-white);
-  background-color: var(--color-light-mint);
+  background-color: #ADBB6D;
   border-radius: 50%;
-  /* display:none; */
   opacity: 0;
   pointer-events: none;
   transition: opacity 300ms ease-in;
@@ -480,82 +446,81 @@ transform: scale(0.9) translateY(40px);
 }
 /* 반응형 */
 /* For below 768px screen width */
-@media screen and (max-width: 768px){
-  :root{
+@media screen and (max-width: 768px) {
+  :root {
     /* Font size */
     --font-large: 30px;
     --font-medium: 18px;
     --font-regular: 16px;
     --font-small: 14px;
     --font-micro: 12px;
-  
   }
-  .navbar__toggle-btn{
-display: block;
-top:16px;
-right: 16px;
-font-size: var(--font-medium);
-}
-#navbar{
-flex-direction: column;/* 위에서 아래로 */
-align-items: flex-start;/* 반대로 */
-background-color: var(--color-pink);
-}
-#navbar.navbar--dark{
-  padding: 16px;
-}
-.navbar__menu{
-  flex-direction: column;
-  text-align: center;
-  width: 100%;
-  display: none;
-}
-.navbar__menu.open{
-  display: block;
-}
-.section{
-  padding: 16px;
-  padding-top: 40px;
-}
-.about__majors{
-  flex-direction: column;
-  margin-top:30px ;
-  margin-bottom: 0px;
-}
+  .navbar__toggle-btn {
+    display: block;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
+  }
+  #navbar {
+    flex-direction: column; /* 위에서 아래로 */
+    align-items: flex-start; /* 반대로 */
+    background-color: #ADBB6D;
+    padding: 30px;
+  }
+  #navbar.navbar--dark {
+    padding: 16px;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+  .navbar__menu.open {
+    display: block;
+  }
+  .section {
+    padding: 16px;
+    padding-top: 40px;
+  }
+  .about__majors {
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
 
-.toolskill{
-  flex-shrink: 1;
-}
+  .toolskill {
+    flex-shrink: 1;
+  }
 
-.major{
-  margin-bottom: 30px;
-}
-.category__btn{
-  margin: 4px 0;
-  width: 100%;
-  /* padding:8px; */
-}
-.skillset{
-  flex-direction: column;
-}
-.tools img{
-  /* 이미지 자동줄임 */
+  .major {
+    margin-bottom: 30px;
+  }
+  .category__btn {
+    margin: 4px 0;
+    width: 100%;
+    /* padding:8px; */
+  }
+  .skillset {
+    flex-direction: column;
+  }
+  .tools img {
+    /* 이미지 자동줄임 */
     max-width: 100%;
     height: auto;
-    
-}
+  }
 
-.project{
-  flex-grow: 1;
-  /* 화면이 작으면 플렉스 그로우를 이용해서 딱 맞게 커지도록 그로우가 알아서 화면을 메꿔주는 것 */
-}
-.arrow-up{
-  width: 50px; 
-  height: 50px;
-  font-size: 30px;
-  bottom:16px;
-  height: 50px;
-  line-height: 50px;
-  right: 16px;
-}
+  .project {
+    flex-grow: 1;
+    /* 화면이 작으면 플렉스 그로우를 이용해서 딱 맞게 커지도록 그로우가 알아서 화면을 메꿔주는 것 */
+  }
+  .arrow-up {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    bottom: 16px;
+    height: 50px;
+    line-height: 50px;
+    right: 16px;
+  }
 }

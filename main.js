@@ -1,113 +1,124 @@
 'use strict';
 
-
-// Make navbar transparent when it is on the top
+// 넷바 투명색
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
+
 document.addEventListener('scroll', () => {
-  if (window.scrollY > navbarHeight) {
+  if (navbarHeight < window.scrollY) {
     navbar.classList.add('navbar--dark');
   } else {
     navbar.classList.remove('navbar--dark');
   }
 });
 
-
-// Handle scrolling when tapping on the navbar menu
+//메뉴 위치 이동
 const navbarMenu = document.querySelector('.navbar__menu');
-navbarMenu.addEventListener('click', (event) =>{
-const target = event.target;
-const link = target.dataset.link;
-if(link==null) {
+const navbarMenuItem = document.querySelector('.navbar__menu__item');
+
+navbarMenu.addEventListener('click', (event) => {
+  const target = event.target;
+  const link = target.dataset.link;
+  // 메뉴 border생성
+  const menuBorder = document.querySelector('.navbar__menu__item.active');
+  menuBorder.classList.remove('active');
+  target.classList.add('active');
+
+  if (link == null) {
     return;
-}
-navbarMenu.classList.remove('open');
-// 스크롤링시 창이 닫힐 수 있도록
-console.log(event.target.dataset.link);
-const scrollTo= document.querySelector(link);
-scrollTo.scrollIntoView({behavior:"smooth"});
+  }
+  //스크롤시 navbarMenu 없애기
+  navbarMenuItem.classList.remove('open');
+
+  const scrollTo = document.querySelector(link);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
 });
 
-// Navbar toggle button for small screen
+// navbar 토글버튼 클릭(작은화면시)
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
 navbarToggleBtn.addEventListener('click', () => {
   navbarMenu.classList.toggle('open');
 });
 
-
-// Handle click on "contact me" button on home
+//contact me 버튼 클릭시 이동
 const contactBtn = document.querySelector('.home_contact');
-contactBtn.addEventListener('click', (event) =>{
-const target = event.target;
-const link = target.dataset.link;
-if(link==null) {
-    return;
-}
-console.log(event.target.dataset.link);
-const scrollTo= document.querySelector(link);
-scrollTo.scrollIntoView({behavior:"smooth"});
+contactBtn.addEventListener('click', (e) => {
+  const contactLink = e.target.dataset.link;
+  const scrollContactSection = document.querySelector(contactLink);
+  scrollContactSection.scrollIntoView({ behavior: 'smooth' });
 });
 
-// Handle click on "contact me" button on home
-// const contactBtn = document.querySelector('.home_contact');
-// contactBtn.addEventListener('click', (event) =>{
-//     scrollIntoView(`#contact`);
-// });
-// function scrollIntoView(selector){
-//     const scrollTo= document.querySelector(link);
-// scrollTo.scrollIntoView({behavior:"smooth"});
-// }
-
-// Make home slowly fade to transparent as the window scrolls down
+// 스크롤시 이전섹션 흐릿하게 하기
 const home = document.querySelector('#home');
-const homeHeight = home.getBoundingClientRect().height;
+const about = document.querySelector('#about');
+const skills = document.querySelector('#skills');
+
 document.addEventListener('scroll', () => {
-  // console.log(homeheight);
-  // console.log(1- window.scrollY /homehieght)
-home.style.opacity = 1- window.scrollY /homeHeight;
+  const homeHeight = home.getBoundingClientRect().height;
+  const aboutHeight = about.getBoundingClientRect().height;
+  const skillsHeight = skills.getBoundingClientRect().height;
+
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+  about.style.opacity = 2 - window.scrollY / aboutHeight;
+  skills.style.opacity = 4 - window.scrollY / skillsHeight;
 });
 
-// Show "arrow up" button when scrolling down
+// arrow up 버튼
 const arrowUp = document.querySelector('.arrow-up');
 document.addEventListener('scroll', () => {
-  if (window.scrollY > homeHeight / 2) {
+  const homeHeight = home.getBoundingClientRect().height;
+  if (homeHeight / 2 < window.scrollY) {
     arrowUp.classList.add('visible');
   } else {
     arrowUp.classList.remove('visible');
   }
 });
-
-// Handle click on the "arrow up" button
+//arrow up버튼 클릭시 맨 위 상단으로 이동
 arrowUp.addEventListener('click', () => {
-  const scrollTo = document.querySelector('#home');  // 함수정의
-  scrollTo.scrollIntoView();
+  const top = document.querySelector('#home');
+  top.scrollIntoView({ behavior: 'smooth' });
 });
 
-//Projects
-const workbtnContainer=document.querySelector('.work__categories');
-const projectContainer=document.querySelector('.work_projects');
-const projects=document.querySelectorAll('.project');
+//프로젝트 필터링
+const workbtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work_projects');
+const projects = document.querySelectorAll('.project');
+//카테고리 버튼 클래스 추가
 
-workbtnContainer.addEventListener('click', (e)=>{
-  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-  if(filter==null){
+workbtnContainer.addEventListener('click', (e) => {
+  const fillter =
+    e.target.dataset.fillter || e.target.parentNode.dataset.fillter;
+  if (fillter == null) {
     return;
   }
-  projectContainer.classList.add('.anim-out');
-  setTimeout(()=>{
-  projects.forEach((project) => {
-    console.log(project.dataset.type);
-    if (filter === '*' || project.dataset.type.includes(filter)) {
-      project.classList.remove('invisible');
-    } else {
-      project.classList.add('invisible');
-    }
-  });
+  projectContainer.classList.add('anim-out');
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (fillter === '*' || project.dataset.type.includes(fillter)) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
 
-    projectContainer.classList.remove('.anim-out');
-  },300)
+    projectContainer.classList.remove('anim-out');
+  }, 300);
+  const selected = document.querySelector('.category__btn.selected');
+  console.log(selected);
+  e.target.classList.add('selected');
+  selected.classList.remove('selected');
 });
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: 'smooth' });
+//문자 타이핑 구현
+const homeDesciption = document.querySelector('.home_description');
+const text = "Hi! I'm Jimin, Front-end developer";
+let index = 0;
+
+function typing() {
+  homeDesciption.textContent += text[index++];
+  if (index > text.length) {
+    homeDesciption.textContent = ""
+    index = 0;
+  }
 }
+setInterval(typing,200);
+

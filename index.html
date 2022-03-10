@@ -20,14 +20,13 @@
  <!-- Navbar -->
     <nav id="navbar">
     <div class="navbar_logo">
-    <a href="#">JIMIN</a>
-    </div>
     
-        <ul class="navbar__menu">
-       <li class="navbar__menu__item active" data-link="#about">About</li>
-            <li class="navbar__menu__item " data-link="#skills" >Skills</li>
-            <li class="navbar__menu__item" data-link="#work">Project</li>
-           <li class="navbar__menu__item" data-link="#contact" >Contact</li>
+    </div>
+        <ul class="navbar__menu ">
+         <li class="navbar__menu__item active" data-link="#about">About</li>
+         <li class="navbar__menu__item " data-link="#skills" >Skills</li>
+         <li class="navbar__menu__item " data-link="#work">Project</li>
+         <li class="navbar__menu__item " data-link="#contact" >Contact</li>
         </ul>
 
 <!-- Toggle button -->
@@ -39,9 +38,10 @@
 <!-- Home -->
 <section id="home">
     <img src="imgs/나.png" alt="Jimin's profile image" class="home_avatar"/>
-    <h1 class="home_title">Web Developer</h1>
-    <h2 class="home_description">"No bees, no honey"</h2>
-    <h3 class="home_description">노력(벌)이 없으면 큰 성과(꿀)가 없다.</h3>
+<div class="description">
+    <h2 class="home_description"></h2>
+   
+  </div>
     <button class="home_contact" data-link="#contact">contact me</button>
 </section>
 
@@ -50,11 +50,9 @@
 <h1>About me</h1>
 <p>
   안녕하세요! 개발자 이지민입니다.
-  <br>IT국비과정을 이수하고  현재,  다양한 프로젝트를 수행하며<u> 더 많은 기능</u>과 <u>깔끔하고 정확한 코드</u>들을 만들기 위해 <br> 즐거운 마음으로 개발 역량을 쌓고 있습니다 
+  <br>IT국비과정을 이수하고  현재, 다양한 프로젝트들을 진행하며 <br> 즐거운 마음으로 개발 역량을 쌓고 있습니다 
 </p>
-<div class="keywords">
-  
-</div>
+
 
 <div class="about__majors">
     <div class="major">
@@ -148,6 +146,15 @@
         </div>
         <div class="skill">
           <div class="skill__description">
+            <span>React</span>
+            <span>60%</span>
+          </div>
+          <div class="skill__bar">
+            <div class="skill__value" style="width: 60%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill__description">
             <span>Java</span>
             <span>60%</span>
           </div>
@@ -155,38 +162,6 @@
             <div class="skill__value" style="width: 60%;"></div>
           </div>
         </div>
-        <div class="skill">
-          <div class="skill__description">
-            <span>Python</span>
-            <span>60%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__value" style="width: 60%;"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <div class="skill__description">
-            <span>React</span>
-            <span>0%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__value" style="width: 0%;"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <div class="skill__description">
-            <span>NodeJS</span>
-            <span>0%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__value" style="width: 0%;"></div>
-          </div>
-        </div>
-      </div>
-      <div class="skillset__right">
-        <div class="tools">
-          <img src="imgs/기술능력.jpg" alt="" class="skillpower">
-            </div>
       </div>
   </div>
   </div>
@@ -195,13 +170,13 @@
    <!-- work -->
     <section id="work" class="section">
     <div class="section__container">
-    <h1>works</h1>
+    <h1>Project</h1>
   
     <div class="work__categories">
-      <button class="category__btn active" data-filter="*">All<span class="category__count">3</span></button>
+      <button class="category__btn selected" data-fillter="*">All<span class="category__count">3</span></button>
       <!-- span은 컨텐츠를 꽉 감싸주는 사이즈로 정해진다 -->
-      <button class="category__btn"data-filter="front-end">Front-end<span class="category__count">3</span></button>
-      <button class="category__btn"data-filter="mobile">Mobile<span class="category__count">1</span></button>
+      <button class="category__btn"data-fillter="front-end">Front-end<span class="category__count">3</span></button>
+      <button class="category__btn"data-fillter="mobile">Mobile<span class="category__count">1</span></button>
     </div>
     
     <div class="work_projects">
@@ -222,7 +197,7 @@
             </div>
         </a>
         
-        <a href="https://wlals2997.github.io/Youtube/index.html" class="project" target="blank" data-type="front-end,mobile">
+        <a href="https://wlals2997.github.io/Youtube/index.html" class="project" target="blank" data-type="front-end mobile">
           <!-- 링크:깃허브 연결 -->
             <img class="project__img" src="imgs/mobile.jpg" alt="Youtubemobile"/>
             <div class="project__description">
@@ -237,8 +212,8 @@
 </section>
 <!-- contact -->
     <section id="contact" class="section">
-    <h1 class="contact_title">Contacts</h1>
-    <h2 class="Contact_email">wlals2997@gmail.com</h2>
+    <h1 class="contact_title">Contact</h1>
+    <h2 class="Contact_email">wlals2997@naver.com</h2>
     <div class="contact_links">
         <a href="https://github.com/wlals2997" target="_blank">
             <i class="fab fa-github"></i>   
