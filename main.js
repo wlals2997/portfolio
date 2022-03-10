@@ -1,6 +1,6 @@
 'use strict';
 
-// 넷바 투명색
+// 넷바 진한색
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 
