@@ -108,17 +108,5 @@ workbtnContainer.addEventListener('click', (e) => {
   e.target.classList.add('selected');
   selected.classList.remove('selected');
 });
-//문자 타이핑 구현
-const homeDesciption = document.querySelector('.home_description');
-const text = "Hi! I'm Jimin, Front-end developer";
-let index = 0;
 
-function typing() {
-  homeDesciption.textContent += text[index++];
-  if (index > text.length) {
-    homeDesciption.textContent = ""
-    index = 0;
-  }
-}
-setInterval(typing,200);
 

@@ -36,18 +36,17 @@
 <section id="home">
     <img src="imgs/나.png" alt="Jimin's profile image" class="home_avatar"/>
     <div class="description">
-    <h2 class="home_description"></h2>
+    <h2 class="home_description">
+      안녕하세요! 프론트엔드 개발자 이지민입니다.
+    </h2>
     </div>
     <button class="home_contact" data-link="#contact">contact me</button>
 </section>
 
     <!-- About -->
 <section id="about" class=" section section__container">
-<h1>About me</h1>
-<p>
-  안녕하세요! 개발자 이지민입니다.
-  <br>IT국비과정을 이수하고  현재, 다양한 프로젝트들을 진행하며 <br> 즐거운 마음으로 개발 역량을 쌓고 있습니다 
-</p>
+<h1>About Me</h1>
+
 
 
 <div class="about__majors">
@@ -81,6 +80,7 @@
       </p>
     </div>
   </div>
+ 
   <div class="about__jobs">
     <div class="job">
       <i class="fas fa-check-square"></i>
@@ -97,7 +97,7 @@
         <p class="job__name">
           한국전파진흥협회 - 프레임워크와 AI 알고리즘을 활용한 지능형 웹서비스 기반 빅데이터 전문가 과정
         </p>
-        <p class="job__period">2021.03 - 2021.07</p>
+        <p class="job__period">2021.04 - 2021.07</p>
        </div>
   </div>
 </section>
@@ -105,55 +105,17 @@
 <section id="skills" class="section">
   <div class="section__container">
     <h1>Skills</h1>
-    <div class="skillset">
-      <div class="skillset__container">
-        <div class="skill">
-          <div class="skill__description">
-            <span>HTML</span>
-            <span>99%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__value" style="width: 99%;"></div>
-            <!-- style을 인라인화 -->
-          </div>
-        </div>
-        <div class="skill">
-          <div class="skill__description">
-            <span>CSS</span>
-            <span>90%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__value" style="width: 90%;"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <div class="skill__description">
-            <span>JavaScript</span>
-            <span>70%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__value" style="width: 70%;"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <div class="skill__description">
-            <span>React</span>
-            <span>60%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__value" style="width: 60%;"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <div class="skill__description">
-            <span>Java</span>
-            <span>60%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__value" style="width: 60%;"></div>
-          </div>
-        </div>
-      </div>
+   <div class="skill__container">
+     <div class="skill-left">
+<h2>Front-end</h2>
+     </div>
+     <div class="skill-right">
+   <p>HTML</p>
+   <p>CSS</p>
+   <p>JavaScript</p>
+   <p>React.js</p>
+  </div>
+    </div>
   </div>
   </div>
 </section>
@@ -167,6 +129,41 @@
       <button class="category__btn"data-fillter="mobile">Mobile<span class="category__count">1</span></button>
     </div>
     <div class="work_projects">
+        <a href="https://github.com/wlals2997/react-for-beginners/tree/master" class="project" target="blank" data-type="front-end">      
+            <img class="project__img" src="imgs/movie.png" alt="movie"/>
+            <div class="project__description">
+              <h3>영화소개 사이트</h3>
+              <span>영화 사이트by React.js</span>
+            </div>
+        </a>
+        <a href="https://github.com/wlals2997/HEEJUK" class="project" target="blank" data-type="front-end">      
+            <img class="project__img" src="imgs/heejuk.png" alt="food"/>
+            <div class="project__description">
+              <h3>죽 매장 사이트</h3>
+              <span>음식 매장 사이트</span>
+            </div>
+        </a>
+        <a href="https://github.com/wlals2997/MyTODO" class="project" target="blank" data-type="front-end">      
+            <img class="project__img" src="imgs/todo.png" alt="todo"/>
+            <div class="project__description">
+              <h3>투두리스트</h3>
+              <span>투두리스트</span>
+            </div>
+        </a>
+        <a href="https://github.com/wlals2997/paintjs" class="project" target="blank" data-type="front-end">      
+            <img class="project__img" src="imgs/paint.png" alt="paint"/>
+            <div class="project__description">
+              <h3>그림판</h3>
+              <span>그림판 클론코딩</span>
+            </div>
+        </a>
+        <a href="https://github.com/wlals2997/kokoatalk-clone" class="project" target="blank" data-type="front-end">      
+            <img class="project__img" src="imgs/kokoatalk.png" alt="kokoatalk"/>
+            <div class="project__description">
+              <h3>카카오톡</h3>
+              <span>카카오톡 클론코딩</span>
+            </div>
+        </a>
         <a href="https://github.com/wlals2997/CampingCommunity1" class="project" target="blank" data-type="front-end">      
             <img class="project__img" src="imgs/camping.png" alt="CampingCommunity"/>
             <div class="project__description">
@@ -175,26 +172,35 @@
             </div>
         </a>
         <a href="https://wlals2997.github.io/drumkit/" class="project" target="blank" data-type="front-end">
-            <img class="project__img" src="imgs/drum.jpg" alt="drumkit"/>
+            <img class="project__img" src="imgs/drum.png" alt="drumkit"/>
             <div class="project__description">
               <h3>drumkit</h3>
-              <span>키보드를 입력하여<br> 드럼소리를 내어보아요</span>
+              <span>키보드를 이용한 드럼소리</span>
             </div>
         </a>
-        <a href="https://wlals2997.github.io/Youtube/index.html" class="project" target="blank" data-type="front-end mobile">
-            <img class="project__img" src="imgs/mobile.jpg" alt="Youtubemobile"/>
+        <a href="https://github.com/wlals2997/kokoatalk-clone" class="project" target="blank" data-type="mobile">
+            <img class="project__img" src="imgs/kokoamobile.png" alt="kokoatalkmobile"/>
+            <div class="project__description">
+              <h3>카카오톡모바일</h3>
+              <span>카카오톡 클론코딩</span>
+            </div>
+        </a>
+        <a href="https://wlals2997.github.io/Youtube/index.html" class="project" target="blank" data-type="mobile">
+            <img class="project__img" src="imgs/youtubemobile.png" alt="Youtubemobile"/>
             <div class="project__description">
               <h3>Youtube</h3>
-              <span>유튜브사이트 입니다.</span>
+              <span>유튜브 클론코딩</span>
             </div>
         </a>
     </div>
   </div>
 </section>
+
+
 <!-- contact -->
     <section id="contact" class="section">
     <h1 class="contact_title">Contact</h1>
-    <h2 class="Contact_email">wlals2997@naver.com</h2>
+    <h2 class="contact_email">wlals2997@naver.com</h2>
     <div class="contact_links">
         <a href="https://github.com/wlals2997" target="_blank">
             <i class="fab fa-github"></i>   

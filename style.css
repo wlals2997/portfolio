@@ -14,7 +14,7 @@
   --color-blue: #73aace;
   --color-dark-blue: #2c413e;
   --color-yellow: #fff7d1;
-  --color-orange: #feb546;
+  --color-orange: #ff8611;
   --color-black: #000000;
   --color-dark-mint: #88c399;
   --color-light-mint: #b9f6ca;
@@ -97,13 +97,13 @@ p {
   width: 100%;
   align-items: center;
   padding: 10px;
-  background-color: #e3ed9b;
+  background-color: var(--color-orange);
   transition: all var(--animation--duration) ease-in-out;
   z-index: 1; /* z-index 우선순위 0이 default */
 }
 
 #navbar.navbar--dark {
-  background-color: #adbb6d;
+  background-color: #ffb74b;
 }
 .navbar__menu {
   display: flex;
@@ -116,6 +116,7 @@ p {
   cursor: pointer;
   border-radius: var(--size-border-radius);
   border: 1px solid transparent;
+  color: white;
 }
 .navbar__menu__item.active {
   border: 3px solid white;
@@ -133,7 +134,7 @@ p {
   display: none;
 }
 #home {
-  background-color: #ffffcd;
+  border-bottom: 1px solid #ffb74b;
   padding: 100px 40px;
   padding-top: 170px;
   text-align: center;
@@ -144,29 +145,27 @@ p {
   border-radius: 50%;
 }
 .description {
-  width: 240px;
-  height: 200px;
-  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 40px 0px;
 }
 
 .home_description {
   color: var(--color-black);
 }
 .home_contact {
-  color: #adbb6d;
+  color: var(--color-orange);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
-  margin-top: 50px;
+  margin-top: 30px;
   padding: 8px 12px;
-  border: 2px solid #adbb6d;
+  border: 2px solid var(--color-orange);
 
   border-radius: 4px;
 }
 .home_contact:hover {
-  background-color: #adbb6d;
+  background-color:  #ffb74b;
   color: white;
 }
 /* Section common */
@@ -193,8 +192,8 @@ p {
   height: 170px;
   line-height: 170px;
   font-size: 70px;
-  border: 1px solid #adbb6d;
-  color: #adbb6d;
+  border: 1px solid var(--color-orange);
+  color: var(--color-orange);
   border-radius: 50%;
   margin-bottom: 16px;
   margin: auto;
@@ -215,7 +214,7 @@ p {
 .job {
   display: flex;
   align-items: center;
-  color: #adbb6d;
+  color: #ffb74b;
 }
 .job__description {
   margin: 0 16px;
@@ -232,41 +231,25 @@ p {
   font-size: var(--font-micro);
 }
 #skills {
-  background-color: #ffffcd;
+  background-color: #ffb74b;
 }
-.skillset {
+#skills h1{
+  color: white;
+}
+.skill__container {
   display: flex;
-  background-color: var(--color-dark-grey);
-  color: var(--color-light-white);
-  margin: auto;
-  width: 70%;
-  padding: 15px;
+  align-items: center;
+  justify-content: space-around;
+  margin: 50px 0px;
+}
+.skill-right p{
+  font-size: 20px;
+  margin: 20px 0px;
 }
 
-.skill__description {
-  display: flex;
-  justify-content: space-between;
-}
-.skill__bar {
-  width: 100%;
-  height: 3px;
-  background-color: var(--color-grey);
-}
-.skill {
-  margin-bottom: 32px;
-}
-.skill__value {
-  width: 70%;
-  height: 3px;
-  background-color: var(--color-orange);
-}
-.skillset__container {
-  width: 100%;
-  padding: 20px 40px;
-}
 /* Work */
 .category__btn {
-  border: 1px solid var(--color-dark-white);
+  border: 1px solid var(--color-orange);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
@@ -277,7 +260,7 @@ p {
 }
 .category__btn.selected,
 .category__btn:hover {
-  background-color: #adbb6d;
+  background-color:var(--color-orange);;
   color: var(--color-white);
 }
 .category__btn.active .category__count,
@@ -289,7 +272,7 @@ p {
   border: 1px solid;
   border-radius: 50%;
   background-color: white;
-  color: #adbb6d;
+  color: var(--color-orange);
   width: 24px;
   height: 24px;
   display: inline-block;
@@ -368,12 +351,13 @@ p {
 }
 /* Contact */
 #contact {
-  background-color: #e3ed9b;
+  background-color: #ffb74b;
+ 
 }
 .contact_title,
 .contact_email,
 .contact_rights {
-  color: black;
+  color: white;
 }
 .contact_title {
   margin: 32px 0;
@@ -383,10 +367,12 @@ p {
   margin: 24px 0;
   transition: all var(--animation--duration) ease-in;
 }
-
+.contact_links i{
+  color: white;
+}
 .contact_links i:hover {
   transform: scale(1.1);
-  color: #adbb6d;
+  color:  var(--color-orange);
 }
 /* Scroll */
 .arrow-up {
@@ -397,7 +383,7 @@ p {
   height: 70px;
   font-size: 50px;
   color: var(--color-white);
-  background-color: #adbb6d;
+  background-color: #ffb74b;
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
