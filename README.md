@@ -12,7 +12,7 @@
 ## :pushpin: Contact
 - 이메일: wlals2997@naver.com
 - 깃헙: https://github.com/wlals2997
-- 노션(블로그):
+- 블로그:https://minidevlog.tistory.com/
 
 ## :pushpin: Projects
 ### 1. [Movie by React.js](https://wlals2997.github.io/react-for-beginners/)
