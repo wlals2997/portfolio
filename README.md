@@ -11,23 +11,36 @@
 
 ## :pushpin: Contact
 - 이메일: wlals2997@naver.com
+- 블로그:https://minidevlog.tistory.com/
 - 깃헙: https://github.com/wlals2997
-- 노션(블로그):
 
 ## :pushpin: Projects
-### 1. [Movie by React.js](https://wlals2997.github.io/react-for-beginners/)
-> 리액트를 이용하여 만든 영화 소개 사이트 입니다.(개인프로젝트)
+### 1. [영화예매사이트](https://wlals2997.github.io/movie-web/)
+> React.js 로 만든 영화 소개 사이트입니다. (개인프로젝트)
 ><br/>
-> 개발기간: 2022.3.20~2022.04.05
->
+>개발기간: 2022년 07월 18일~ 2022년 08월 09일.(완료)
+> 
 >기술 스택:
-> React(v17.02),react-router-dom(v5.3.0)
+> react.js(18.2.0),react-router-dom(6.3.0),React-Redux,styled-compoents(5.3.5),firebase(v9),firebase(v9)
 >
->[프로젝트 상세 설명(리드미)](https://github.com/wlals2997/react-for-beginners/tree/master) 참고
+>[프로젝트 상세 설명(리드미)](https://github.com/wlals2997/movie-web) 참고
 
 ---
 
-### 2. [죽 매장 사이트](https://wlals2997.github.io/HEEJUK//)
+### 3. [트위터 클론코딩](https://wlals2997.github.io/nwitter/#/)
+> 리액트와 파이어베이스를 통해 만든 트위터 클론코딩입니다.(개인 프로젝트)
+>
+> 개발기간: 2022.7.06 ~ 2022.07.22.(완료)
+>
+>
+>기술 스택:
+> React.js(16.13.1),Firebase(v9),React-Redux
+>
+>[프로젝트 상세 설명(리드미)](https://github.com/wlals2997/nwitter) 참고
+
+---
+
+### 3. [죽 매장 사이트](https://wlals2997.github.io/HEEJUK//)
 > Html,css,js로 만든 죽 매장 사이트입니다.(개인 프로젝트)
 ><br/>
 > 개발기간: 2021.11.10~2021.11.19(완료)
@@ -41,7 +54,7 @@
 
 ---
 
-### 3. [투두리스트](https://wlals2997.github.io/MyTODO/)
+### 4. [투두리스트](https://wlals2997.github.io/MyTODO/)
 > 순수 자바스크립트로 만든 투두리스트 크롬 앱 입니다.(개인 프로젝트)
 ><br/>
 > 개발기간: 2021.10.21 ~ 2022.11.05
