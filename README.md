@@ -13,10 +13,6 @@
 - 이메일: wlals2997@naver.com
 - 블로그:https://minidevlog.tistory.com/
 - 깃헙: https://github.com/wlals2997
-<<<<<<< HEAD
-=======
-- 블로그:https://minidevlog.tistory.com/
->>>>>>> d179f3b330c33874b83de7e046bf29a5a6123698
 
 ## :pushpin: Projects
 ### 1. [영화예매사이트](https://wlals2997.github.io/movie-web/)
